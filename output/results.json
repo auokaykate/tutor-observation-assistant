@@ -1,0 +1,1038 @@
+{
+  "settings": {
+    "low_confidence_threshold": 0.6,
+    "unknown_gap_threshold": 0.2,
+    "llm_requested": false,
+    "llm_model": "claude-opus-5-5",
+    "zone_sources": [
+      "rules"
+    ]
+  },
+  "records": [
+    {
+      "id": "R1",
+      "text": "05.03.2025. Ребёнок CH-0421, тьютор Иванова А. С. Сон 6 ч 30 мин, утром вялый. На занятии по коммуникации отвечал односложно.",
+      "extract": {
+        "date": "2025-03-05",
+        "child_id": "CH-0421",
+        "author": "Иванова А. С.",
+        "sleep_hours": 6.5,
+        "zone": null
+      },
+      "expected": {
+        "date": "2025-03-05",
+        "child_id": "CH-0421",
+        "author": "Иванова А. С.",
+        "sleep_hours": 6.5,
+        "zone": null
+      },
+      "field_status": {
+        "date": "correct",
+        "child_id": "correct",
+        "author": "correct",
+        "sleep_hours": "correct",
+        "zone": "correct_none"
+      },
+      "classify": {
+        "type": "observation",
+        "confidence": 0.8,
+        "scores": {
+          "observation": 4.0,
+          "lesson_report": 1.0,
+          "parent_note": 0.0,
+          "recommendation": 0.0
+        },
+        "shares": {
+          "observation": 0.8,
+          "lesson_report": 0.2,
+          "parent_note": 0.0,
+          "recommendation": 0.0
+        },
+        "leader": "observation",
+        "runner_up": "lesson_report",
+        "gap": 0.6,
+        "evidence": {
+          "observation": [
+            "тьютор",
+            "вялый",
+            "отвечал"
+          ],
+          "lesson_report": [
+            "занятии"
+          ],
+          "parent_note": [],
+          "recommendation": []
+        },
+        "expected_type": "observation"
+      },
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "id": "R2",
+      "text": "Отчёт о занятии №12 от 1 марта 2025 г. Специалист Петров И. И. Ребёнок CH0107, зона: моторика. Накануне спал 6,5 часов.",
+      "extract": {
+        "date": "2025-03-01",
+        "child_id": "CH-0107",
+        "author": "Петров И. И.",
+        "sleep_hours": 6.5,
+        "zone": "моторика"
+      },
+      "expected": {
+        "date": "2025-03-01",
+        "child_id": "CH-0107",
+        "author": "Петров И. И.",
+        "sleep_hours": 6.5,
+        "zone": "моторика"
+      },
+      "field_status": {
+        "date": "correct",
+        "child_id": "correct",
+        "author": "correct",
+        "sleep_hours": "correct",
+        "zone": "correct"
+      },
+      "classify": {
+        "type": "lesson_report",
+        "confidence": 0.95,
+        "scores": {
+          "observation": 0.0,
+          "lesson_report": 7.5,
+          "parent_note": 0.0,
+          "recommendation": 0.0
+        },
+        "shares": {
+          "observation": 0.0,
+          "lesson_report": 1.0,
+          "parent_note": 0.0,
+          "recommendation": 0.0
+        },
+        "leader": "lesson_report",
+        "runner_up": "observation",
+        "gap": 1.0,
+        "evidence": {
+          "observation": [],
+          "lesson_report": [
+            "Отчёт",
+            "№12",
+            "зона:",
+            "Специалист",
+            "занятии"
+          ],
+          "parent_note": [],
+          "recommendation": []
+        },
+        "expected_type": "lesson_report"
+      },
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "id": "R3",
+      "text": "03/01/25, мама ребёнка CH-0342: ночью просыпался, итого 5:45 сна, утром отказался от завтрака.",
+      "extract": {
+        "date": "2025-03-01",
+        "child_id": "CH-0342",
+        "author": "мама ребёнка",
+        "sleep_hours": 5.75,
+        "zone": null
+      },
+      "expected": {
+        "date": "2025-03-01",
+        "child_id": "CH-0342",
+        "author": "мама ребёнка",
+        "sleep_hours": 5.75,
+        "zone": null
+      },
+      "field_status": {
+        "date": "correct",
+        "child_id": "correct",
+        "author": "correct",
+        "sleep_hours": "correct",
+        "zone": "correct_none"
+      },
+      "classify": {
+        "type": "parent_note",
+        "confidence": 0.95,
+        "scores": {
+          "observation": 0.0,
+          "lesson_report": 0.0,
+          "parent_note": 5.0,
+          "recommendation": 0.0
+        },
+        "shares": {
+          "observation": 0.0,
+          "lesson_report": 0.0,
+          "parent_note": 1.0,
+          "recommendation": 0.0
+        },
+        "leader": "parent_note",
+        "runner_up": "observation",
+        "gap": 1.0,
+        "evidence": {
+          "observation": [],
+          "lesson_report": [],
+          "parent_note": [
+            "мама",
+            "ночью",
+            "завтрака"
+          ],
+          "recommendation": []
+        },
+        "expected_type": "parent_note"
+      },
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "id": "R4",
+      "text": "07.03.25 ch-0421 тьют.Иванова сон~390 минут,настрй норм, сенсор.перегрузка в столовой",
+      "extract": {
+        "date": "2025-03-07",
+        "child_id": "CH-0421",
+        "author": "Иванова",
+        "sleep_hours": 6.5,
+        "zone": null
+      },
+      "expected": {
+        "date": "2025-03-07",
+        "child_id": "CH-0421",
+        "author": "Иванова",
+        "sleep_hours": 6.5,
+        "zone": null
+      },
+      "field_status": {
+        "date": "correct",
+        "child_id": "correct",
+        "author": "correct",
+        "sleep_hours": "correct",
+        "zone": "correct_none"
+      },
+      "classify": {
+        "type": "observation",
+        "confidence": 0.95,
+        "scores": {
+          "observation": 4.0,
+          "lesson_report": 0.0,
+          "parent_note": 0.0,
+          "recommendation": 0.0
+        },
+        "shares": {
+          "observation": 1.0,
+          "lesson_report": 0.0,
+          "parent_note": 0.0,
+          "recommendation": 0.0
+        },
+        "leader": "observation",
+        "runner_up": "lesson_report",
+        "gap": 1.0,
+        "evidence": {
+          "observation": [
+            "тьют.",
+            "настрй",
+            "перегрузка"
+          ],
+          "lesson_report": [],
+          "parent_note": [],
+          "recommendation": []
+        },
+        "expected_type": "observation"
+      },
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "id": "R5",
+      "text": "Рекомендация от 12 марта 2025 г. по ребёнку CH-0107: ввести сенсорную паузу в середине занятия. Специалист Петров И. И.",
+      "extract": {
+        "date": "2025-03-12",
+        "child_id": "CH-0107",
+        "author": "Петров И. И.",
+        "sleep_hours": null,
+        "zone": null
+      },
+      "expected": {
+        "date": "2025-03-12",
+        "child_id": "CH-0107",
+        "author": "Петров И. И.",
+        "sleep_hours": null,
+        "zone": null
+      },
+      "field_status": {
+        "date": "correct",
+        "child_id": "correct",
+        "author": "correct",
+        "sleep_hours": "correct_none",
+        "zone": "correct_none"
+      },
+      "classify": {
+        "type": "recommendation",
+        "confidence": 0.69,
+        "scores": {
+          "observation": 0.0,
+          "lesson_report": 2.0,
+          "parent_note": 0.0,
+          "recommendation": 4.5
+        },
+        "shares": {
+          "observation": 0.0,
+          "lesson_report": 0.308,
+          "parent_note": 0.0,
+          "recommendation": 0.692
+        },
+        "leader": "recommendation",
+        "runner_up": "lesson_report",
+        "gap": 0.384,
+        "evidence": {
+          "observation": [],
+          "lesson_report": [
+            "Специалист",
+            "занятия"
+          ],
+          "parent_note": [],
+          "recommendation": [
+            "Рекомендация",
+            "ввести"
+          ]
+        },
+        "expected_type": "recommendation"
+      },
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "id": "R6",
+      "text": "Ребёнок был в хорошем настроении, играл с конструктором.",
+      "extract": {
+        "date": null,
+        "child_id": null,
+        "author": null,
+        "sleep_hours": null,
+        "zone": null
+      },
+      "expected": {
+        "date": null,
+        "child_id": null,
+        "author": null,
+        "sleep_hours": null,
+        "zone": null
+      },
+      "field_status": {
+        "date": "correct_none",
+        "child_id": "correct_none",
+        "author": "correct_none",
+        "sleep_hours": "correct_none",
+        "zone": "correct_none"
+      },
+      "classify": {
+        "type": "observation",
+        "confidence": 0.5,
+        "scores": {
+          "observation": 2.0,
+          "lesson_report": 0.0,
+          "parent_note": 0.0,
+          "recommendation": 0.0
+        },
+        "shares": {
+          "observation": 1.0,
+          "lesson_report": 0.0,
+          "parent_note": 0.0,
+          "recommendation": 0.0
+        },
+        "leader": "observation",
+        "runner_up": "lesson_report",
+        "gap": 1.0,
+        "evidence": {
+          "observation": [
+            "настроении",
+            "играл"
+          ],
+          "lesson_report": [],
+          "parent_note": [],
+          "recommendation": []
+        },
+        "expected_type": "observation"
+      },
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": true
+      }
+    }
+  ],
+  "observations": [
+    {
+      "index": 1,
+      "note": "отказ от еды третий день подряд",
+      "is_zone": true,
+      "confidence": 0.76,
+      "explanation": "Отказ от еды относится к зоне 'питание' (в записи: «отказ от еды третий день подряд»).",
+      "zone": "питание",
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 2.0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [],
+      "expected": {
+        "note": "отказ от еды третий день подряд",
+        "is_zone": true,
+        "zones": [
+          "питание"
+        ],
+        "disputed": false
+      },
+      "matches_expected": true,
+      "flagged": false,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 2,
+      "note": "ударил себя по голове при смене маршрута",
+      "is_zone": true,
+      "confidence": 0.46,
+      "explanation": "Самоповреждающее действие относится к зоне 'поведение' (в записи: «ударил себя по голове при смене маршрута»). Сомнение: есть признаки и зоны 'эмоции' (самоповреждение как возможный признак эмоционального состояния: «ударил себя по голове при смене маршрута»). Контекст: смена привычного порядка («смене маршрута»). Уверенность снижена, нужна проверка специалистом.",
+      "zone": "поведение",
+      "source": "rules",
+      "scores": {
+        "эмоции": 1.0,
+        "коммуникация": 0,
+        "поведение": 2.0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [
+        "конкурирующая зона 'эмоции'"
+      ],
+      "expected": {
+        "note": "ударил себя по голове при смене маршрута",
+        "is_zone": true,
+        "zones": [
+          "поведение",
+          "эмоции"
+        ],
+        "disputed": true
+      },
+      "matches_expected": true,
+      "flagged": true,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": true
+      }
+    },
+    {
+      "index": 3,
+      "note": "не отвечал на обращённую речь весь день",
+      "is_zone": true,
+      "confidence": 0.83,
+      "explanation": "Отсутствие ответа или речи относится к зоне 'коммуникация' (в записи: «не отвечал на обращённую речь весь день»).",
+      "zone": "коммуникация",
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 3.5,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [],
+      "expected": {
+        "note": "не отвечал на обращённую речь весь день",
+        "is_zone": true,
+        "zones": [
+          "коммуникация"
+        ],
+        "disputed": false
+      },
+      "matches_expected": true,
+      "flagged": false,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 4,
+      "note": "закрывал уши в столовой из-за шума",
+      "is_zone": true,
+      "confidence": 0.81,
+      "explanation": "Закрывание ушей или глаз относится к зоне 'сенсорика' (в записи: «закрывал уши в столовой из-за шума»).",
+      "zone": "сенсорика",
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 3.0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [],
+      "expected": {
+        "note": "закрывал уши в столовой из-за шума",
+        "is_zone": true,
+        "zones": [
+          "сенсорика"
+        ],
+        "disputed": false
+      },
+      "matches_expected": true,
+      "flagged": false,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 5,
+      "note": "заснул только к полуночи, спал 5 часов",
+      "is_zone": true,
+      "confidence": 0.84,
+      "explanation": "Описание сна относится к зоне 'сон' (в записи: «заснул только к полуночи», «спал 5 часов»).",
+      "zone": "сон",
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 4.0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [],
+      "expected": {
+        "note": "заснул только к полуночи, спал 5 часов",
+        "is_zone": true,
+        "zones": [
+          "сон"
+        ],
+        "disputed": false
+      },
+      "matches_expected": true,
+      "flagged": false,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 6,
+      "note": "впервые сам застегнул куртку",
+      "is_zone": true,
+      "confidence": 0.84,
+      "explanation": "Самостоятельное одевание относится к зоне 'самообслуживание' (в записи: «впервые сам застегнул куртку»).",
+      "zone": "самообслуживание",
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 4.0
+      },
+      "doubts": [],
+      "expected": {
+        "note": "впервые сам застегнул куртку",
+        "is_zone": true,
+        "zones": [
+          "самообслуживание"
+        ],
+        "disputed": false
+      },
+      "matches_expected": true,
+      "flagged": false,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 7,
+      "note": "не удерживает карандаш, роняет мелкие предметы",
+      "is_zone": true,
+      "confidence": 0.84,
+      "explanation": "Трудность удержания предметов относится к зоне 'моторика' (в записи: «не удерживает карандаш», «роняет мелкие предметы»).",
+      "zone": "моторика",
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 4.0,
+        "самообслуживание": 0
+      },
+      "doubts": [],
+      "expected": {
+        "note": "не удерживает карандаш, роняет мелкие предметы",
+        "is_zone": true,
+        "zones": [
+          "моторика"
+        ],
+        "disputed": false
+      },
+      "matches_expected": true,
+      "flagged": false,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 8,
+      "note": "плакал 20 минут без видимой причины",
+      "is_zone": true,
+      "confidence": 0.81,
+      "explanation": "Плач относится к зоне 'эмоции' (в записи: «плакал 20 минут без видимой причины»).",
+      "zone": "эмоции",
+      "source": "rules",
+      "scores": {
+        "эмоции": 3.0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [],
+      "expected": {
+        "note": "плакал 20 минут без видимой причины",
+        "is_zone": true,
+        "zones": [
+          "эмоции"
+        ],
+        "disputed": false
+      },
+      "matches_expected": true,
+      "flagged": false,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 9,
+      "note": "поездка в центр на автобусе заняла 40 минут",
+      "is_zone": false,
+      "confidence": 0.5,
+      "explanation": "Не относится ни к одной зоне: описано обстоятельство — поездка, транспорт («поездка в центр на автобусе заняла 40 минут»), а не состояние или действия ребёнка. Сомнение: реакция ребёнка не описана; если она была, запись нужно уточнить.",
+      "zone": null,
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [
+        "реакция ребёнка не описана"
+      ],
+      "expected": {
+        "note": "поездка в центр на автобусе заняла 40 минут",
+        "is_zone": false,
+        "zones": [],
+        "disputed": true
+      },
+      "matches_expected": true,
+      "flagged": true,
+      "flags": {
+        "needs_clarification": true,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 10,
+      "note": "родители перенесли занятие на четверг",
+      "is_zone": false,
+      "confidence": 0.5,
+      "explanation": "Не относится ни к одной зоне: описано обстоятельство — перенос или отмена занятия («родители перенесли занятие на четверг»), а не состояние или действия ребёнка. Сомнение: реакция ребёнка не описана; если она была, запись нужно уточнить.",
+      "zone": null,
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [
+        "реакция ребёнка не описана"
+      ],
+      "expected": {
+        "note": "родители перенесли занятие на четверг",
+        "is_zone": false,
+        "zones": [],
+        "disputed": true
+      },
+      "matches_expected": true,
+      "flagged": true,
+      "flags": {
+        "needs_clarification": true,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 11,
+      "note": "в кабинете меняли лампы, занятие прошло в другой комнате",
+      "is_zone": false,
+      "confidence": 0.5,
+      "explanation": "Не относится ни к одной зоне: описано обстоятельство — изменение обстановки («в кабинете меняли лампы», «занятие прошло в другой комнате»), а не состояние или действия ребёнка. Сомнение: реакция ребёнка не описана; если она была, запись нужно уточнить.",
+      "zone": null,
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [
+        "реакция ребёнка не описана"
+      ],
+      "expected": {
+        "note": "в кабинете меняли лампы, занятие прошло в другой комнате",
+        "is_zone": false,
+        "zones": [],
+        "disputed": true
+      },
+      "matches_expected": true,
+      "flagged": true,
+      "flags": {
+        "needs_clarification": true,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 12,
+      "note": "оформлена справка для поликлиники",
+      "is_zone": false,
+      "confidence": 0.5,
+      "explanation": "Не относится ни к одной зоне: описано обстоятельство — оформление документов («оформлена справка для поликлиники»), а не состояние или действия ребёнка. Сомнение: реакция ребёнка не описана; если она была, запись нужно уточнить.",
+      "zone": null,
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [
+        "реакция ребёнка не описана"
+      ],
+      "expected": {
+        "note": "оформлена справка для поликлиники",
+        "is_zone": false,
+        "zones": [],
+        "disputed": true
+      },
+      "matches_expected": true,
+      "flagged": true,
+      "flags": {
+        "needs_clarification": true,
+        "low_confidence": false
+      }
+    },
+    {
+      "index": 13,
+      "note": "ел только жёлтую еду, остальное отодвигал",
+      "is_zone": true,
+      "confidence": 0.51,
+      "explanation": "Избирательность в еде относится к зоне 'питание' (в записи: «ел только жёлтую еду», «остальное отодвигал»). Сомнение: есть признаки и зоны 'сенсорика' (избирательность по цвету: «ел только жёлтую еду»). Уверенность снижена, нужна проверка специалистом.",
+      "zone": "питание",
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 0,
+        "питание": 4.5,
+        "сенсорика": 1.5,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [
+        "конкурирующая зона 'сенсорика'"
+      ],
+      "expected": {
+        "note": "ел только жёлтую еду, остальное отодвигал",
+        "is_zone": true,
+        "zones": [
+          "питание",
+          "сенсорика"
+        ],
+        "disputed": true
+      },
+      "matches_expected": true,
+      "flagged": true,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": true
+      }
+    },
+    {
+      "index": 14,
+      "note": "отказался идти на занятие, потому что шёл дождь",
+      "is_zone": true,
+      "confidence": 0.46,
+      "explanation": "Отказ от деятельности относится к зоне 'поведение' (в записи: «отказался идти на занятие»). Сомнение: названо обстоятельство (погода: «дождь»), реакция может быть ситуативной. Уверенность снижена, нужна проверка специалистом.",
+      "zone": "поведение",
+      "source": "rules",
+      "scores": {
+        "эмоции": 0,
+        "коммуникация": 0,
+        "поведение": 2.0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [
+        "обстоятельство: погода"
+      ],
+      "expected": {
+        "note": "отказался идти на занятие, потому что шёл дождь",
+        "is_zone": true,
+        "zones": [
+          "поведение"
+        ],
+        "disputed": true
+      },
+      "matches_expected": true,
+      "flagged": true,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": true
+      }
+    },
+    {
+      "index": 15,
+      "note": "был весёлым на празднике, много бегал и шумел",
+      "is_zone": true,
+      "confidence": 0.27,
+      "explanation": "Положительное эмоциональное состояние относится к зоне 'эмоции' (в записи: «был весёлым на празднике»). Сомнение: есть признаки и зоны 'поведение' (двигательная активность: «много бегал и шумел»). Сомнение: названо обстоятельство (праздник или мероприятие: «празднике»), реакция может быть ситуативной. Уверенность снижена, нужна проверка специалистом.",
+      "zone": "эмоции",
+      "source": "rules",
+      "scores": {
+        "эмоции": 2.0,
+        "коммуникация": 0,
+        "поведение": 2.0,
+        "питание": 0,
+        "сенсорика": 0,
+        "сон": 0,
+        "моторика": 0,
+        "самообслуживание": 0
+      },
+      "doubts": [
+        "конкурирующая зона 'поведение'",
+        "обстоятельство: праздник или мероприятие"
+      ],
+      "expected": {
+        "note": "был весёлым на празднике, много бегал и шумел",
+        "is_zone": true,
+        "zones": [
+          "эмоции",
+          "поведение"
+        ],
+        "disputed": true
+      },
+      "matches_expected": true,
+      "flagged": true,
+      "flags": {
+        "needs_clarification": false,
+        "low_confidence": true
+      }
+    }
+  ],
+  "summary": {
+    "extraction": {
+      "date": {
+        "correct": 5,
+        "correct_none": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "child_id": {
+        "correct": 5,
+        "correct_none": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "author": {
+        "correct": 5,
+        "correct_none": 1,
+        "missed": 0,
+        "wrong": 0
+      },
+      "sleep_hours": {
+        "correct": 4,
+        "correct_none": 2,
+        "missed": 0,
+        "wrong": 0
+      },
+      "zone": {
+        "correct": 1,
+        "correct_none": 5,
+        "missed": 0,
+        "wrong": 0
+      }
+    },
+    "classification_correct": 6,
+    "threshold_sweep": [
+      {
+        "threshold": 0.1,
+        "unknown": [],
+        "correct": 6,
+        "min_extra_words": 2,
+        "passes_rule": true,
+        "selected_by_rule": false
+      },
+      {
+        "threshold": 0.2,
+        "unknown": [],
+        "correct": 6,
+        "min_extra_words": 2,
+        "passes_rule": true,
+        "selected_by_rule": true
+      },
+      {
+        "threshold": 0.3,
+        "unknown": [],
+        "correct": 6,
+        "min_extra_words": 1,
+        "passes_rule": false,
+        "selected_by_rule": false
+      },
+      {
+        "threshold": 0.4,
+        "unknown": [
+          "R5"
+        ],
+        "correct": 5,
+        "min_extra_words": 0,
+        "passes_rule": false,
+        "selected_by_rule": false
+      },
+      {
+        "threshold": 0.5,
+        "unknown": [
+          "R5"
+        ],
+        "correct": 5,
+        "min_extra_words": 0,
+        "passes_rule": false,
+        "selected_by_rule": false
+      },
+      {
+        "threshold": 0.6,
+        "unknown": [
+          "R5"
+        ],
+        "correct": 5,
+        "min_extra_words": 0,
+        "passes_rule": false,
+        "selected_by_rule": false
+      },
+      {
+        "threshold": 0.7,
+        "unknown": [
+          "R1",
+          "R5"
+        ],
+        "correct": 4,
+        "min_extra_words": 0,
+        "passes_rule": false,
+        "selected_by_rule": false
+      }
+    ],
+    "zones": {
+      "total": 15,
+      "bool_matches": 15,
+      "full_matches": 15,
+      "disputed": 8,
+      "disputed_flagged": 8,
+      "clear_flagged": 0
+    },
+    "flags": {
+      "needs_clarification": {
+        "records": [],
+        "observations": [
+          "#9",
+          "#10",
+          "#11",
+          "#12"
+        ],
+        "records_share": 0.0,
+        "observations_share": 0.267,
+        "count": 4,
+        "total": 21,
+        "share": 0.19
+      },
+      "low_confidence": {
+        "records": [
+          "R6"
+        ],
+        "observations": [
+          "#2",
+          "#13",
+          "#14",
+          "#15"
+        ],
+        "records_share": 0.167,
+        "observations_share": 0.267,
+        "count": 5,
+        "total": 21,
+        "share": 0.238
+      }
+    }
+  }
+}
